@@ -10,6 +10,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.log
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,7 +29,8 @@ import static de.robv.android.xposed.XposedHelpers.findClass;
 
 
 public class Main implements IXposedHookLoadPackage {
-
+    
+    private static final String TAG = "RandomGame";
     private static final String WECHAT_PACKAGE_NAME = "com.tencent.mm";
 
     private static String wechatVersion = "";
