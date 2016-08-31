@@ -108,7 +108,7 @@ public class Main implements IXposedHookLoadPackage {
                 for (ApplicationInfo applicationInfo : applicationList) {
                     String packageName = applicationInfo.packageName;
                     if (isTarget(packageName)) {
-                        log("Hid package: " + packageName);
+                        Log.i(TAG, "Hid package: " + packageName);
                     } else {
                         resultapplicationList.add(applicationInfo);
                     }
@@ -125,7 +125,7 @@ public class Main implements IXposedHookLoadPackage {
                 for (PackageInfo packageInfo : packageInfoList) {
                     String packageName = packageInfo.packageName;
                     if (isTarget(packageName)) {
-                        log("Hid package: " + packageName);
+                        Log.i(TAG, "Hid package: " + packageName);
                     } else {
                         resultpackageInfoList.add(packageInfo);
                     }
@@ -139,7 +139,7 @@ public class Main implements IXposedHookLoadPackage {
                 String packageName = (String) param.args[0];
                 if (isTarget(packageName)) {
                     param.args[0] = WECHAT_PACKAGE_NAME;
-                    log("Fake package: " + packageName + " as " + WECHAT_PACKAGE_NAME);
+                    Log.i(TAG, "Fake package: " + packageName + " as " + WECHAT_PACKAGE_NAME);
                 }
             }
         });
@@ -149,7 +149,7 @@ public class Main implements IXposedHookLoadPackage {
                 String packageName = (String) param.args[0];
                 if (isTarget(packageName)) {
                     param.args[0] = WECHAT_PACKAGE_NAME;
-                    log("Fake package: " + packageName + " as " + WECHAT_PACKAGE_NAME);
+                    Log.i(TAG, "Fake package: " + packageName + " as " + WECHAT_PACKAGE_NAME);
                 }
             }
         });
