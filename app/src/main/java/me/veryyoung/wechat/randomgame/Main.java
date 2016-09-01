@@ -10,7 +10,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.log;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Arrays;
