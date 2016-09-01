@@ -8,6 +8,9 @@ public class VersionParam {
 
     public static void init(String version) {
         switch (version) {
+            case "6.3.22":
+                randomGameClass = "com.tencent.mm.sdk.platformtools.be";
+                gameType = "rl";
             case "6.3.23":
             case "6.3.25":
                 randomGameClass = "com.tencent.mm.sdk.platformtools.be";
